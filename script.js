@@ -4,11 +4,11 @@ class Person {
 		this.name = name
 		this.age = age
 	}
-	get(){
+	get name(){
 		return this.name
 	}
-	set(value){
-		this.age = value
+	set age(age){
+		this.age = age
 	}
 }
 
@@ -23,15 +23,17 @@ class Teacher extends Person {
 		console.log(`${this.name} is teaching`)
 	}
 }
-const student = new Student('Alice', 20);
+const person = new Person("John", 25);
+console.log(person.name); // Output: John
+
+person.age = 30;
+console.log(person.age); // Output: 30
+
+const student = new Student("Alice", 22);
 student.study(); // Output: Alice is studying
 
-const teacher = new Teacher('Bob', 45);
+const teacher = new Teacher("Bob", 40);
 teacher.teach(); // Output: Bob is teaching
-
-// Demonstrating the setter for age
-student.age = 21;
-console.log(student.age);
 
 // Do not change the code below this line
 window.Person = Person;
